@@ -289,8 +289,8 @@ static char ** split_arguments_by_pipe(char *input_string, int num_pipes){
 
 /* Output prompt as current absolute path */
 static void output_prompt() {
-  char buf[PATH_MAX];
-  getcwd(buf, PATH_MAX);
+  char buf[200];
+  getcwd(buf, 200);
   printf(CYN "[%s]$ " RESET, buf);
 }
 
